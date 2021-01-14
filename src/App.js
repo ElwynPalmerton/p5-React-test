@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import P5Wrapper from 'react-p5-wrapper';
+import sketch from './sketch'
+
+
 
 function App() {
+
+  const [paused, setPause] = useState(false)
+
+  function handleClick() {
+    setPause(!paused);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <P5Wrapper
+        paused={paused}
+        rotation={50}
+        sketch={sketch}
+
+      />
+      <button
+        onClick={handleClick}
+      >PAUSE/PLAY
+
+      </button>
+
     </div>
   );
 }
