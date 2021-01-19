@@ -15,17 +15,25 @@ function App() {
 
   return (
     <div className="App">
-      <P5Wrapper
-        paused={paused}
-        rotation={50}
-        sketch={sketch}
 
-      />
+      <div style={{
+        position: "absolute"
+      }}>
+        <P5Wrapper
+          paused={paused}
+          rotation={50}
+          sketch={sketch}
+        />
+      </div>
       <button
+        style={{
+          position: "relative"
+        }}
         onClick={handleClick}
       >PAUSE/PLAY
 
       </button>
+
 
     </div>
   );
