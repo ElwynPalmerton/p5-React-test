@@ -12,8 +12,8 @@ export default function sketch(p) {
 
     update() {
       this.z = this.z - this.speed;
-      console.log("i: ", this.i, "x: ", this.x, "y: ", this.y)
-      console.log("z: ", this.z)
+      // console.log("i: ", this.i, "x: ", this.x, "y: ", this.y)
+      // console.log("z: ", this.z)
       if (this.z < 100) {
         // console.log('out');
         this.z = p.random(p.width);
